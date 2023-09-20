@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hotel Room Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            background-color: #f7f7f7;
+        }
+
+        .header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .confirmation {
+            color: #007BFF;
+        }
+
+        .booking-details {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hotel Room Booking Confirmation</h1>
+        </div>
+        <div class="content">
+            <p>Hello {{.GuestName}},</p>
+            <p>Your hotel room booking has been confirmed. Below are the details of your reservation:</p>
+            <div class="booking-details"> 
+                <p>[%body]</p>
+                <p><strong>Hotel Name:</strong> {{.HotelName}}</p>
+                <p><strong>Check-in Date:</strong> {{.CheckInDate}}</p>
+                <p><strong>Check-out Date:</strong> {{.CheckOutDate}}</p>
+                <p><strong>Room Type:</strong> {{.RoomType}}</p>
+                <p><strong>Confirmation Number:</strong> {{.ConfirmationNumber}}</p>
+            </div>
+            <p>We look forward to hosting you at our hotel. If you have any questions or need further assistance, please
+                don't hesitate to contact us.</p>
+            <p class="confirmation">Thank you for choosing {{.HotelName}}!</p>
+        </div>
+    </div>
+</body>
+
+</html>
